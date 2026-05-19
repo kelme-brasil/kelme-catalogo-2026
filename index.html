@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelme Brasil - Catalogo Feira 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0a0a0a;--gold:#C9A84C;--white:#F8F6F1}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);min-height:100vh}
+.header{background:linear-gradient(135deg,#0a0a0a,#1a1a1a,#0a0a0a);border-bottom:3px solid var(--gold);padding:24px 36px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:14px}
+.paw{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px}
+.brand{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;letter-spacing:6px}
+.brand span{color:var(--gold)}
+.badge-tag{background:var(--gold);color:#000;font-family:'Oswald',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:2px}
+.sub{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-top:4px;text-align:right}
+.promo{background:linear-gradient(135deg,#1a1200,#2d2000,#1a1200);border:1px solid var(--gold);border-left:5px solid var(--gold);margin:20px 36px;padding:18px 24px;border-radius:4px}
+.promo-title{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:12px}
+.promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.promo-item{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:4px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.promo-cat{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.promo-val{font-size:13px;color:var(--white);font-weight:500}
+.promo-val strong{color:var(--gold);font-size:15px}
+.promo-note{margin-top:12px;font-size:10px;color:rgba(255,255,255,0.35);border-top:1px solid rgba(201,168,76,0.15);padding-top:8px}
+.controls{display:flex;gap:10px;margin:0 36px 24px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:180px;background:#1a1a1a;border:1px solid #333;border-radius:4px;padding:9px 14px;color:var(--white);font-size:13px;outline:none}
+.search:focus{border-color:var(--gold)}
+.search::placeholder{color:rgba(255,255,255,0.3)}
+.fbtn{background:#1a1a1a;border:1px solid #333;color:rgba(255,255,255,0.5);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;padding:9px 18px;border-radius:4px;cursor:pointer;transition:all .2s}
+.fbtn:hover,.fbtn.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.08)}
+.main{padding:0 36px 60px}
+.section{margin-bottom:48px}
+.sec-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #1e1e1e}
+.sec-icon{font-size:20px}
+.sec-title{font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;letter-spacing:3px;text-transform:uppercase}
+.sec-badge{margin-left:auto;font-size:11px;font-weight:600;letter-spacing:1px;padding:4px 12px;border-radius:20px}
+.badge-c{background:rgba(26,58,110,.3);color:#6699dd;border:1px solid rgba(102,153,221,.3)}
+.badge-ch{background:rgba(26,92,26,.3);color:#66bb66;border:1px solid rgba(102,187,102,.3)}
+.badge-b{background:rgba(139,26,26,.3);color:#dd6666;border:1px solid rgba(221,102,102,.3)}
+.badge-k{background:rgba(100,50,120,.3);color:#bb88dd;border:1px solid rgba(187,136,221,.3)}
+.subsec{margin-bottom:28px}
+.subsec-title{font-family:'Oswald',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;color:var(--gold);background:rgba(201,168,76,.06);padding:7px 14px;border-left:3px solid var(--gold);margin-bottom:14px;text-transform:uppercase}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:#111;border:1px solid #222;border-radius:6px;overflow:hidden;transition:border-color .2s,transform .15s}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card-img{background:#1a1a1a;height:165px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:8px}
+.card-img img{max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))}
+.card-body{padding:12px 14px}
+.card-line{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:2px}
+.card-code{font-size:9px;color:rgba(255,255,255,.3);letter-spacing:1px;margin-bottom:5px}
+.card-size{font-size:9px;color:rgba(255,255,255,.4);margin-bottom:7px}
+.card-extra{font-size:9px;color:rgba(255,255,255,.35);margin-bottom:6px;line-height:1.4}
+.colors{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:9px}
+.chip{background:#222;color:rgba(255,255,255,.5);font-size:9px;padding:2px 7px;border-radius:2px;letter-spacing:.5px}
+.pt{cursor:pointer;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:4px;padding:7px 10px;display:flex;align-items:center;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.5);transition:all .2s}
+.pt:hover{border-color:var(--gold);color:var(--gold)}
+.pp{display:none;margin-top:6px;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:4px;overflow:hidden}
+.pp.open{display:block}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:5px 10px;border-bottom:1px solid #1a1a1a}
+.pr:last-child{border-bottom:none}
+.pl{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:1px}
+.pv{font-size:11px;font-weight:500;color:rgba(255,255,255,.75)}
+.pv.av{color:#88cc88}
+.pv.gold{color:var(--gold)}
+.arrow{transition:transform .2s;display:inline-block}
+.bolas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.bola-card{background:#111;border:1px solid #222;border-radius:6px;overflow:hidden;transition:border-color .2s}
+.bola-card:hover{border-color:var(--gold)}
+.bola-img{background:#1a1a1a;height:200px;display:flex;align-items:center;justify-content:center;padding:12px}
+.bola-img img{max-width:90%;max-height:90%;object-fit:contain}
+.bola-name{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;letter-spacing:2px;margin:16px 16px 4px}
+.bola-meta{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px;margin:0 16px 3px}
+.bola-prices{margin:12px 16px}
+.bola-price-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.bola-pitem{font-size:11px;color:rgba(255,255,255,.55)}
+.bola-pitem span{font-size:9px;color:rgba(255,255,255,.3);margin-right:2px}
+.bola-promo{background:rgba(139,26,26,.2);border-top:1px solid rgba(221,102,102,.2);padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.bola-plabel{font-size:10px;color:rgba(255,255,255,.4)}
+.bola-pprice{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#dd6666}
+.footer{border-top:1px solid #1e1e1e;margin:0 36px;padding:18px 0;display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px}
+@media(max-width:768px){
+  .header{padding:16px;flex-direction:column;gap:12px;text-align:center}
+  .main{padding:0 16px 40px}
+  .controls{margin:0 16px 20px}
+  .promo{margin:16px}
+  .promo-grid{grid-template-columns:1fr}
+  .footer{margin:0 16px;flex-direction:column;gap:8px}
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">
+    <div class="paw">&#128062;</div>
+    <div class="brand">KEL<span>ME</span></div>
+  </div>
+  <div>
+    <div class="badge-tag">CATALOGO FEIRA 2026</div>
+    <div class="sub">USO EXCLUSIVO REPRESENTANTES</div>
+  </div>
+</div>
+<div class="promo">
+  <div class="promo-title">DESCONTOS ESPECIAIS DE FEIRA - APLICADOS NO FECHAMENTO DO PEDIDO</div>
+  <div class="promo-grid">
+    <div class="promo-item">
+      <div style="font-size:28px">&#128085;</div>
+      <div><div class="promo-cat">Camisas / Times</div><div class="promo-val">Desconto de <strong>5%</strong> sobre tabela</div></div>
+    </div>
+    <div class="promo-item">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <path d="M4 22 C4 22 6 18 10 17 L26 10 C28 9 30 11 29 13 L22 28 C21 30 18 30 17 28 L14 22 Z" fill="#C9A84C" opacity="0.9"/>
+        <path d="M10 17 L17 28" stroke="#0a0a0a" stroke-width="1.5"/>
+        <ellipse cx="26" cy="10" rx="2" ry="2" fill="#0a0a0a" opacity="0.4"/>
+      </svg>
+      <div><div class="promo-cat">Chuteiras</div><div class="promo-val">Desconto de <strong>10%</strong> sobre tabela</div></div>
+    </div>
+    <div class="promo-item">
+      <div style="font-size:28px">&#9917;</div>
+      <div><div class="promo-cat">Bolas</div><div class="promo-val">Preco fixo de <strong>R$ 53,00</strong> na feira</div></div>
+    </div>
+  </div>
+  <div class="promo-note">Os precos exibidos sao os valores originais da tabela. Descontos aplicados no fechamento do pedido. Pedido minimo Chuteiras: R$ 3.000. Faturamento a vista com 15 dias e cobranca bancaria. Os pinos serao fornecidos gratuitamente.</div>
+</div>
+<div class="controls">
+  <input class="search" type="text" id="searchInput" placeholder="Buscar produto, codigo ou cor..." oninput="doSearch()">
+  <button class="fbtn active" onclick="filterCat('all',this)">Todos</button>
+  <button class="fbtn" onclick="filterCat('camisas',this)">&#128085; Camisas</button>
+  <button class="fbtn" onclick="filterCat('chuteiras',this)">&#128Ÿ'Ÿ Chuteiras</button>
+  <button class="fbtn" onclick="filterCat('kids',this)">&#128116; Infantil</button>
+  <button class="fbtn" onclick="filterCat('bolas',this)">&#9917; Bolas</button>
+</div>
+<div class="main">
+
+<div class="section" id="sec-camisas">
+<div class="sec-header"><div class="sec-icon">&#128085;</div><div class="sec-title">Camisas - Times Parceiros</div><div class="sec-badge badge-c">5% NA FEIRA</div></div>
+<div class="subsec"><div class="subsec-title">Gremio Esportivo Brasil</div><div class="cards">
+<div class="card" data-cat="camisas" data-search="camisa 1 gremio esportivo brasil oficial">
+<div class="card-img" style="background:#0d1218"><img src="images/img_1.jpg" alt="Camisa 1 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 1 (Oficial)</div>
+<div class="card-code">Gremio Esportivo Brasil</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,23</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 191,05</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 194,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 198,85</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 389,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa 2 gremio esportivo brasil oficial">
+<div class="card-img" style="background:#0d1218"><img src="images/img_2.jpg" alt="Camisa 2 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 2 (Oficial)</div>
+<div class="card-code">Gremio Esportivo Brasil</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,23</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 191,05</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 194,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 198,85</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 389,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa 3 gremio esportivo brasil oficial">
+<div class="card-img" style="background:#111"><img src="images/img_3.jpg" alt="Camisa 3 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 3 (Oficial)</div>
+<div class="card-code">Gremio Esportivo Brasil</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,23</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 191,05</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 194,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 198,85</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 389,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa torcedor gremio esportivo brasil">
+<div class="card-img" style="background:#0d0d0d;flex-direction:column;gap:8px">
+<span style="font-size:36px">&#128085;</span>
+<span style="font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px">FOTO NAO DISPONIVEL</span>
+</div>
+<div class="card-body">
+<div class="card-line">Camisa Torcedor</div>
+<div class="card-code">Gremio Esportivo Brasil</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 124,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 127,35</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 129,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 132,55</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 259,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa fan gremio esportivo brasil">
+<div class="card-img" style="background:#0d0d0d;flex-direction:column;gap:8px">
+<span style="font-size:36px">&#128085;</span>
+<span style="font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px">FOTO NAO DISPONIVEL</span>
+</div>
+<div class="card-body">
+<div class="card-line">Camisa Fan</div>
+<div class="card-code">Gremio Esportivo Brasil</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 91,19</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 93,05</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 94,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 96,85</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 189,90</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">America Futebol Clube (RN)</div><div class="cards">
+<div class="card" data-cat="camisas" data-search="camisa 1 america futebol clube rn natal oficial">
+<div class="card-img" style="background:#0d1218"><img src="images/img_4.jpg" alt="Camisa 1 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 1 (Oficial)</div>
+<div class="card-code">America FC - Natal/RN</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 168,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 171,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 174,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 178,45</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 349,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa 2 america futebol clube rn natal oficial">
+<div class="card-img" style="background:#1a0505"><img src="images/img_5.jpg" alt="Camisa 2 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 2 (Oficial)</div>
+<div class="card-code">America FC - Natal/RN</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 168,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 171,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 174,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 178,45</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 349,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa torcedor america rn natal">
+<div class="card-img" style="background:#0d0d0d;flex-direction:column;gap:8px">
+<span style="font-size:36px">&#128085;</span>
+<span style="font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px">FOTO NAO DISPONIVEL</span>
+</div>
+<div class="card-body">
+<div class="card-line">Camisa Torcedor</div>
+<div class="card-code">America FC - Natal/RN</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 124,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 127,35</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 129,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 132,55</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 259,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa fan america rn natal">
+<div class="card-img" style="background:#0d0d0d;flex-direction:column;gap:8px">
+<span style="font-size:36px">&#128085;</span>
+<span style="font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px">FOTO NAO DISPONIVEL</span>
+</div>
+<div class="card-body">
+<div class="card-line">Camisa Fan</div>
+<div class="card-code">America FC - Natal/RN</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 86,39</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 88,15</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 89,95</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 91,75</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 179,90</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Anapolis Futebol Clube</div><div class="cards">
+<div class="card" data-cat="camisas" data-search="camisa 1 anapolis futebol clube oficial">
+<div class="card-img" style="background:#111"><img src="images/img_6.jpg" alt="Camisa 1 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 1 (Oficial)</div>
+<div class="card-code">Anapolis Futebol Clube</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 149,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 153,65</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 157,40</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 161,14</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 314,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa 2 anapolis futebol clube oficial">
+<div class="card-img" style="background:#0d0d0d"><img src="images/img_7.jpg" alt="Camisa 2 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 2 (Oficial)</div>
+<div class="card-code">Anapolis Futebol Clube</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 149,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 153,65</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 157,40</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 161,14</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 314,90</span></div></div>
+</div></div>
+<div class="card" data-cat="camisas" data-search="camisa 3 anapolis futebol clube oficial">
+<div class="card-img" style="background:#111"><img src="images/img_8.jpg" alt="Camisa 3 (Oficial)" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Camisa 3 (Oficial)</div>
+<div class="card-code">Anapolis Futebol Clube</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 149,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 153,65</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 157,40</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 161,14</span></div><div class="pr"><span class="pl">PV Sugerido</span><span class="pv gold">R$ 314,90</span></div></div>
+</div></div>
+</div></div>
+</div>
+<div class="section" id="sec-chuteiras">
+<div class="sec-header"><div class="sec-icon">&#128Ÿ'Ÿ</div><div class="sec-title">Chuteiras</div><div class="sec-badge badge-ch">10% NA FEIRA</div></div>
+<div class="subsec"><div class="subsec-title">Flamenco Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="flamenco tf pto preto kef4111003 121">
+<div class="card-img"><img src="images/img_9.jpg" alt="Flamenco TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF CRO</div>
+<div class="card-code">KEF4111003 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 198,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 200,75</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 202,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 205,31</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco tf mho marinho azul kef4111003 323">
+<div class="card-img"><img src="images/img_10.jpg" alt="Flamenco TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF CRO</div>
+<div class="card-code">KEF4111003 - MHO/BCO/MHO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">MHO/BCO/MHO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 198,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 200,75</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 202,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 205,31</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco tf vmo vermelho kef4111004 424">
+<div class="card-img"><img src="images/img_11.jpg" alt="Flamenco TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF SIN</div>
+<div class="card-code">KEF4111004 - VMO/BCO/VMO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/BCO/VMO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 183,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,58</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 189,42</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 191,26</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 193,72</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco tf vde verde grafite kef4111004 585">
+<div class="card-img"><img src="images/img_12.jpg" alt="Flamenco TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF SIN</div>
+<div class="card-code">KEF4111004 - VDE/GRF/VDE</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VDE/GRF/VDE</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 183,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,58</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 189,42</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 191,26</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 193,72</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco tf bco branco preto kef4112004 212">
+<div class="card-img"><img src="images/img_13.jpg" alt="Flamenco TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF CRO</div>
+<div class="card-code">KEF4112004 - BCO/PTO/BCO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">BCO/PTO/BCO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 198,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 200,75</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 202,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 205,31</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco tf cza cinza verde lima kef4112004 815">
+<div class="card-img"><img src="images/img_14.jpg" alt="Flamenco TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF CRO</div>
+<div class="card-code">KEF4112004 - CZA/PTO/VDE L</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">CZA/PTO/VDE L</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 198,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 200,75</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 202,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 205,31</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco tf pto preto verde lima kef4112004 151">
+<div class="card-img"><img src="images/img_15.jpg" alt="Flamenco TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco TF CRO</div>
+<div class="card-code">KEF4112004 - PTO/VDE L/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/VDE L/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 198,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 200,75</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 202,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 205,31</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Flamenco Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="flamenco futsal fs 121 ptobranco kef4112002">
+<div class="card-img"><img src="images/img_16.jpg" alt="Flamenco FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco FS CRO</div>
+<div class="card-code">KEF4112002 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 198,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 200,75</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 202,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 205,31</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco futsal fs 606 bege kef4112003">
+<div class="card-img"><img src="images/img_17.jpg" alt="Flamenco FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco FS SIN</div>
+<div class="card-code">KEF4112003 - BGE/DDO/BGE</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">BGE/DDO/BGE</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 183,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,58</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 189,42</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 191,26</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 193,72</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco futsal fs 666 amarelo kef4112003">
+<div class="card-img"><img src="images/img_18.jpg" alt="Flamenco FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco FS SIN</div>
+<div class="card-code">KEF4112003 - AMA/PTO/AMA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AMA/PTO/AMA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 183,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,58</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 189,42</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 191,26</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 193,72</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco futsal fs 525 verde kef4112003">
+<div class="card-img"><img src="images/img_19.jpg" alt="Flamenco FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco FS SIN</div>
+<div class="card-code">KEF4112003 - VDE/BCO/VDE</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VDE/BCO/VDE</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 183,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 187,58</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 189,42</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 191,26</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 193,72</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Flamenco Campo (FG / TR)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="flamenco campo fg tr trava kef4110002 121">
+<div class="card-img"><img src="images/img_20.jpg" alt="Flamenco Campo CRO Trava Rem" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco Campo CRO Trava Rem</div>
+<div class="card-code">KEF4110002 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 264,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 270,20</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 272,85</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 275,50</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 279,05</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco campo fg 240 branco kef4110001">
+<div class="card-img"><img src="images/img_21.jpg" alt="Flamenco Campo CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco Campo CRO</div>
+<div class="card-code">KEF4110001 - BCO/VHO/DDO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">BCO/VHO/DDO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 144,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 147,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 149,25</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 150,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 152,64</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="flamenco campo fg 121 preto kef4110001">
+<div class="card-img"><img src="images/img_22.jpg" alt="Flamenco Campo CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Flamenco Campo CRO</div>
+<div class="card-code">KEF4110001 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 144,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 147,80</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 149,25</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 150,70</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 152,64</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Elite Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="elite society tf 121 ptobranco kef4111005">
+<div class="card-img"><img src="images/img_23.jpg" alt="Elite TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite TF CRO</div>
+<div class="card-code">KEF4111005 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 187,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 191,66</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 193,54</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 195,42</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 197,93</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="elite society tf 325 marrom verde kef4111005">
+<div class="card-img"><img src="images/img_24.jpg" alt="Elite TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite TF CRO</div>
+<div class="card-code">KEF4111005 - MHO/BCO/VDE L</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">MHO/BCO/VDE L</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 187,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 191,66</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 193,54</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 195,42</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 197,93</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="elite society tf 424 vermelho kef4111005">
+<div class="card-img"><img src="images/img_25.jpg" alt="Elite TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite TF CRO</div>
+<div class="card-code">KEF4111005 - VMO/BCO/VMO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/BCO/VMO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 187,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 191,66</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 193,54</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 195,42</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 197,93</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="elite society tf 836 cinza azul laranja kef4111006">
+<div class="card-img"><img src="images/img_26.jpg" alt="Elite TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite TF SIN</div>
+<div class="card-code">KEF4111006 - CZA/AZL/LJA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">CZA/AZL/LJA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 184,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 188,60</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 190,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 192,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 194,77</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Elite Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="elite futsal fs 121 ptobranco kef4112004">
+<div class="card-img"><img src="images/img_27.jpg" alt="Elite FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite FS CRO</div>
+<div class="card-code">KEF4112004 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 187,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 191,66</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 193,54</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 195,42</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 197,93</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="elite futsal fs 325 marrom verde kef4112004">
+<div class="card-img"><img src="images/img_28.jpg" alt="Elite FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite FS CRO</div>
+<div class="card-code">KEF4112004 - MHO/BCO/VDE L</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">MHO/BCO/VDE L</span></div>
+<div class="card-extra">Cabedal: Couro | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 187,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 191,66</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 193,54</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 195,42</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 197,93</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="elite futsal fs 616 amarelo kef4112006">
+<div class="card-img"><img src="images/img_29.jpg" alt="Elite FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite FS SIN</div>
+<div class="card-code">KEF4112006 - AMA/PTO/AMA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AMA/PTO/AMA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 184,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 188,60</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 190,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 192,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 194,77</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="elite futsal fs 585 verde kef4112006">
+<div class="card-img"><img src="images/img_30.jpg" alt="Elite FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Elite FS SIN</div>
+<div class="card-code">KEF4112006 - VDE/GRF/VDE</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VDE/GRF/VDE</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 184,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 188,60</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 190,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 192,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 194,77</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Fuerza 2.0 Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 tf pto preto branco kef4111008 121">
+<div class="card-img"><img src="images/img_31.jpg" alt="Fuerza 2.0 TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 TF</div>
+<div class="card-code">KEF4111008 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 tf azl azul kef4111008 323">
+<div class="card-img"><img src="images/img_32.jpg" alt="Fuerza 2.0 TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 TF</div>
+<div class="card-code">KEF4111008 - AZL/BCO/AZL</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL/BCO/AZL</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 tf ama amarelo limao kef4111008 616">
+<div class="card-img"><img src="images/img_33.jpg" alt="Fuerza 2.0 TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 TF</div>
+<div class="card-code">KEF4111008 - AMA/PTO/AMA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AMA/PTO/AMA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 tf cza cinza branco kef4111008 828">
+<div class="card-img"><img src="images/img_34.jpg" alt="Fuerza 2.0 TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 TF</div>
+<div class="card-code">KEF4111008 - CZA/BCO/CZA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">CZA/BCO/CZA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 tf lja laranja kef4111008 616">
+<div class="card-img"><img src="images/img_35.jpg" alt="Fuerza 2.0 TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 TF</div>
+<div class="card-code">KEF4111008 - LJA/PTO/LJA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">LJA/PTO/LJA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Fuerza 2.0 Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 futsal fs pto preto kef4112009 121">
+<div class="card-img"><img src="images/img_36.jpg" alt="Fuerza 2.0 FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 FS</div>
+<div class="card-code">KEF4112009 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 futsal fs vmo vermelho kef4112009 424">
+<div class="card-img"><img src="images/img_37.jpg" alt="Fuerza 2.0 FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 FS</div>
+<div class="card-code">KEF4112009 - VMO/BCO/VMO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/BCO/VMO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 futsal fs lja laranja kef4112009">
+<div class="card-img"><img src="images/img_38.jpg" alt="Fuerza 2.0 FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 FS</div>
+<div class="card-code">KEF4112009 - LJA/BCO/LJA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">LJA/BCO/LJA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="fuerza 2.0 futsal fs azl azul kef4112009">
+<div class="card-img"><img src="images/img_39.jpg" alt="Fuerza 2.0 FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza 2.0 FS</div>
+<div class="card-code">KEF4112009 - AZL/BCO/AZL</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL/BCO/AZL</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Skill Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="skill society tf 121 ptobranco kef4111002">
+<div class="card-img"><img src="images/img_40.jpg" alt="Skill TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill TF</div>
+<div class="card-code">KEF4111002 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="skill society tf 312 azul metalico kef4111002">
+<div class="card-img"><img src="images/img_41.jpg" alt="Skill TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill TF</div>
+<div class="card-code">KEF4111002 - AZL MET/PTO/BCO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL MET/PTO/BCO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="skill society tf 428 vermelho kef4111002">
+<div class="card-img"><img src="images/img_42.jpg" alt="Skill TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill TF</div>
+<div class="card-code">KEF4111002 - VMO/BCO/CZA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/BCO/CZA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="skill society tf 511 verde kef4111002">
+<div class="card-img"><img src="images/img_43.jpg" alt="Skill TF" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill TF</div>
+<div class="card-code">KEF4111002 - VDE/PTO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VDE/PTO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Skill Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="skill futsal fs 121 ptobranco kef4112001">
+<div class="card-img"><img src="images/img_44.jpg" alt="Skill FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill FS</div>
+<div class="card-code">KEF4112001 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="skill futsal fs 353 marrom verde kef4112001">
+<div class="card-img"><img src="images/img_45.jpg" alt="Skill FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill FS</div>
+<div class="card-code">KEF4112001 - MHO/VDE L/MHO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">MHO/VDE L/MHO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="skill futsal fs 428 vermelho kef4112001">
+<div class="card-img"><img src="images/img_46.jpg" alt="Skill FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill FS</div>
+<div class="card-code">KEF4112001 - VMO/BCO/CZA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/BCO/CZA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="skill futsal fs 612 amarelo kef4112001">
+<div class="card-img"><img src="images/img_47.jpg" alt="Skill FS" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Skill FS</div>
+<div class="card-code">KEF4112001 - AMA/PTO/BCO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AMA/PTO/BCO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 179,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 183,50</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 185,30</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 187,10</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 189,51</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Finale Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="finale tf 181 ptocinza kef4111020">
+<div class="card-img"><img src="images/img_48.jpg" alt="Finale TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale TF SIN</div>
+<div class="card-code">KEF4111020 - PTO/CZA/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/CZA/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="finale tf 92192 lilas kef4111020">
+<div class="card-img"><img src="images/img_49.jpg" alt="Finale TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale TF SIN</div>
+<div class="card-code">KEF4111020 - LIL/PTO/LIL</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">LIL/PTO/LIL</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="finale tf 103110 camelo caqui kef4111020">
+<div class="card-img"><img src="images/img_50.jpg" alt="Finale TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale TF SIN</div>
+<div class="card-code">KEF4111020 - CAM/CTE/CAM</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">CAM/CTE/CAM</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="finale tf 1921 ptolilas kef4111020">
+<div class="card-img"><img src="images/img_51.jpg" alt="Finale TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale TF SIN</div>
+<div class="card-code">KEF4111020 - PTO/LIL/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/LIL/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Finale Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="finale futsal fs 319131 azul rosa kef4112018">
+<div class="card-img"><img src="images/img_52.jpg" alt="Finale FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale FS SIN</div>
+<div class="card-code">KEF4112018 - CTE/RSA/CTE</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">CTE/RSA/CTE</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="finale futsal fs 1631 azul bege kef4112018">
+<div class="card-img"><img src="images/img_53.jpg" alt="Finale FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale FS SIN</div>
+<div class="card-code">KEF4112018 - PTO/BGE/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BGE/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="finale futsal fs 1911 ptorosa kef4112018">
+<div class="card-img"><img src="images/img_54.jpg" alt="Finale FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale FS SIN</div>
+<div class="card-code">KEF4112018 - PTO/RSA/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/RSA/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="finale futsal fs 4334 vermelho marrom kef4112018">
+<div class="card-img"><img src="images/img_55.jpg" alt="Finale FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Finale FS SIN</div>
+<div class="card-code">KEF4112018 - VMO/MHO/VMO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/MHO/VMO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Protheus Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="protheus tf 1632 bege preto kef4111020">
+<div class="card-img"><img src="images/img_56.jpg" alt="Protheus TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Protheus TF SIN</div>
+<div class="card-code">KEF4111020 - PTO/BGE/BCO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BGE/BCO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="protheus tf 31331 azul tiffany kef4111020">
+<div class="card-img"><img src="images/img_57.jpg" alt="Protheus TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Protheus TF SIN</div>
+<div class="card-code">KEF4111020 - CTE/MHO/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">CTE/MHO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="protheus tf 182 ptocinza branco kef4111020">
+<div class="card-img"><img src="images/img_58.jpg" alt="Protheus TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Protheus TF SIN</div>
+<div class="card-code">KEF4111020 - PTO/CZA/BCO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/CZA/BCO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 101,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 103,94</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 104,96</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 105,98</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 107,34</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Protheus Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="protheus futsal fs 3913 azul rosa kef4112018">
+<div class="card-img"><img src="images/img_59.jpg" alt="Protheus FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Protheus FS SIN</div>
+<div class="card-code">KEF4112018 - AZL/RSA/AZL</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL/RSA/AZL</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="protheus futsal fs 3691 azul amarelo rosa kef4112018">
+<div class="card-img"><img src="images/img_60.jpg" alt="Protheus FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Protheus FS SIN</div>
+<div class="card-code">KEF4112018 - AZL/AMA/RSA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL/AMA/RSA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="protheus futsal fs 126 ptoamarelo kef4112018">
+<div class="card-img"><img src="images/img_61.jpg" alt="Protheus FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Protheus FS SIN</div>
+<div class="card-code">KEF4112018 - PTO/BCO/AMA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/BCO/AMA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 105,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 108,02</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 109,08</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 110,14</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 111,56</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Intense Society (TF)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="intense tf 181 preto cinza kef4111021">
+<div class="card-img"><img src="images/img_62.jpg" alt="Intense TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense TF CRO</div>
+<div class="card-code">KEF4111021 - PTO/CZA/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/CZA/PTO</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="intense tf 161 ptoamarelo kef4111021">
+<div class="card-img"><img src="images/img_63.jpg" alt="Intense TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense TF CRO</div>
+<div class="card-code">KEF4111021 - PTO/AMA/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/AMA/PTO</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="intense tf 414 vermelho azul kef4111021">
+<div class="card-img"><img src="images/img_64.jpg" alt="Intense TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense TF CRO</div>
+<div class="card-code">KEF4111021 - VMO/PTO/VMO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">VMO/PTO/VMO</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="intense tf 343 azul vermelho kef4111021">
+<div class="card-img"><img src="images/img_65.jpg" alt="Intense TF CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense TF CRO</div>
+<div class="card-code">KEF4111021 - AZL/VMO/AZL</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL/VMO/AZL</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Intense Futsal (FS)</div><div class="cards">
+<div class="card" data-cat="chuteiras" data-search="intense futsal fs 212 brancopreto kef4112019">
+<div class="card-img"><img src="images/img_66.jpg" alt="Intense FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense FS CRO</div>
+<div class="card-code">KEF4112019 - BCO/PTO/BCO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">BCO/PTO/BCO</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="intense futsal fs 6626 amarelo laranja kef4112019">
+<div class="card-img"><img src="images/img_67.jpg" alt="Intense FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense FS CRO</div>
+<div class="card-code">KEF4112019 - AMA/LJA/AMA</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AMA/LJA/AMA</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="intense futsal fs 343 azul vermelho kef4112019">
+<div class="card-img"><img src="images/img_68.jpg" alt="Intense FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense FS CRO</div>
+<div class="card-code">KEF4112019 - AZL/VMO/AZL</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">AZL/VMO/AZL</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+<div class="card" data-cat="chuteiras" data-search="intense futsal fs 181 preto kef4112019">
+<div class="card-img"><img src="images/img_69.jpg" alt="Intense FS CRO" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Intense FS CRO</div>
+<div class="card-code">KEF4112019 - PTO/CZA/PTO</div>
+<div class="card-size">Tam. 37-44</div>
+<div class="colors"><span class="chip">PTO/CZA/PTO</span></div>
+<div class="card-extra">Cabedal: Couro/Tela | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 191,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 195,74</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 197,66</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 199,58</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 202,15</span></div></div>
+</div></div>
+</div></div>
+</div>
+<div class="section" id="sec-kids">
+<div class="sec-header"><div class="sec-icon">&#128116;</div><div class="sec-title">Linha Infantil - Kids</div><div class="sec-badge badge-k">10% NA FEIRA</div></div>
+<div class="subsec"><div class="subsec-title">Fuerza Society Kids (TF) - Tam. 28 ao 35</div><div class="cards">
+<div class="card" data-cat="kids" data-search="fuerza society kids tf 121 ptobranco kef4114001 infantil">
+<div class="card-img"><img src="images/img_70.jpg" alt="Fuerza Society Kids TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza Society Kids TF SIN</div>
+<div class="card-code">KEF4114001-121 - PTO/BCO/PTO</div>
+<div class="card-size">Tam. 28-35</div>
+<div class="colors"><span class="chip">PTO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 84,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 86,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 87,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 88,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 89,43</span></div></div>
+</div></div>
+<div class="card" data-cat="kids" data-search="fuerza society kids tf 421 vermelho kef4114001 infantil">
+<div class="card-img"><img src="images/img_71.jpg" alt="Fuerza Society Kids TF SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza Society Kids TF SIN</div>
+<div class="card-code">KEF4114001-421 - VMO/BCO/PTO</div>
+<div class="card-size">Tam. 28-35</div>
+<div class="colors"><span class="chip">VMO/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 84,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 86,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 87,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 88,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 89,43</span></div></div>
+</div></div>
+</div></div>
+<div class="subsec"><div class="subsec-title">Fuerza Futsal Kids (FS) - Tam. 28 ao 35</div><div class="cards">
+<div class="card" data-cat="kids" data-search="fuerza futsal kids fs 6221 laranja kef4115001 infantil">
+<div class="card-img"><img src="images/img_72.jpg" alt="Fuerza Futsal Kids FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza Futsal Kids FS SIN</div>
+<div class="card-code">KEF4115001-6221 - LJA/BCO/PTO</div>
+<div class="card-size">Tam. 28-35</div>
+<div class="colors"><span class="chip">LJA/BCO/PTO</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 84,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 86,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 87,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 88,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 89,43</span></div></div>
+</div></div>
+<div class="card" data-cat="kids" data-search="fuerza futsal kids fs 424 amarelo neon kef4115001 infantil">
+<div class="card-img"><img src="images/img_73.jpg" alt="Fuerza Futsal Kids FS SIN" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="card-body">
+<div class="card-line">Fuerza Futsal Kids FS SIN</div>
+<div class="card-code">KEF4115001-424 - AMA/BCO/AMA</div>
+<div class="card-size">Tam. 28-35</div>
+<div class="colors"><span class="chip">AMA/BCO/AMA</span></div>
+<div class="card-extra">Cabedal: Sintetico | Solado: Borracha</div>
+<div class="pt" onclick="togglePrices(this)">Ver precos por prazo <span class="arrow">&#9660;</span></div>
+<div class="pp"><div class="pr"><span class="pl">A Vista</span><span class="pv av">R$ 84,90</span></div><div class="pr"><span class="pl">30DD</span><span class="pv">R$ 86,90</span></div><div class="pr"><span class="pl">45DD</span><span class="pv">R$ 87,45</span></div><div class="pr"><span class="pl">60DD</span><span class="pv">R$ 88,30</span></div><div class="pr"><span class="pl">75DD</span><span class="pv">R$ 89,43</span></div></div>
+</div></div>
+</div></div>
+</div>
+<div class="section" id="sec-bolas">
+<div class="sec-header"><div class="sec-icon">&#9917;</div><div class="sec-title">Bolas Kelme Veloz</div><div class="sec-badge badge-b">R$ 53,00 NA FEIRA</div></div>
+<div class="bolas-grid">
+<div class="bola-card" data-cat="bolas" data-search="bola campo kelme veloz keb415300341fg - vmo/pto fg">
+<div class="bola-img"><img src="images/img_74.jpg" alt="Bola Campo Kelme Veloz" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="bola-name">Bola Campo Kelme Veloz</div>
+<div class="bola-meta">KEB415300341FG - VMO/PTO FG</div>
+<div class="bola-meta">EAN: 7908117138728</div>
+<div class="bola-prices">
+<div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:1px;margin-bottom:6px">TABELA ORIGINAL</div>
+<div class="bola-price-row">
+<div class="bola-pitem"><span>15DD</span>R$ 59,35</div>
+<div class="bola-pitem"><span>30DD</span>R$ 60,35</div>
+<div class="bola-pitem"><span>45DD</span>R$ 61,40</div>
+<div class="bola-pitem"><span>60DD</span>R$ 62,45</div>
+<div class="bola-pitem"><span>75DD</span>R$ 63,50</div>
+</div></div>
+<div class="bola-promo"><div class="bola-plabel">Preco Feira</div><div class="bola-pprice">R$ 53,00</div></div>
+</div>
+<div class="bola-card" data-cat="bolas" data-search="bola society kelme veloz keb415300362itf - lja/pto tf">
+<div class="bola-img"><img src="images/img_75.jpg" alt="Bola Society Kelme Veloz" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="bola-name">Bola Society Kelme Veloz</div>
+<div class="bola-meta">KEB415300362ITF - LJA/PTO TF</div>
+<div class="bola-meta">EAN: 7908117138735</div>
+<div class="bola-prices">
+<div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:1px;margin-bottom:6px">TABELA ORIGINAL</div>
+<div class="bola-price-row">
+<div class="bola-pitem"><span>15DD</span>R$ 59,35</div>
+<div class="bola-pitem"><span>30DD</span>R$ 60,35</div>
+<div class="bola-pitem"><span>45DD</span>R$ 61,40</div>
+<div class="bola-pitem"><span>60DD</span>R$ 62,45</div>
+<div class="bola-pitem"><span>75DD</span>R$ 63,50</div>
+</div></div>
+<div class="bola-promo"><div class="bola-plabel">Preco Feira</div><div class="bola-pprice">R$ 53,00</div></div>
+</div>
+<div class="bola-card" data-cat="bolas" data-search="bola futsal kelme veloz keb415300334fs - azl/vmo fs">
+<div class="bola-img"><img src="images/img_76.jpg" alt="Bola Futsal Kelme Veloz" style="max-width:90%;max-height:90%;object-fit:contain;"></div>
+<div class="bola-name">Bola Futsal Kelme Veloz</div>
+<div class="bola-meta">KEB415300334FS - AZL/VMO FS</div>
+<div class="bola-meta">EAN: 7908117138742</div>
+<div class="bola-prices">
+<div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:1px;margin-bottom:6px">TABELA ORIGINAL</div>
+<div class="bola-price-row">
+<div class="bola-pitem"><span>15DD</span>R$ 59,35</div>
+<div class="bola-pitem"><span>30DD</span>R$ 60,35</div>
+<div class="bola-pitem"><span>45DD</span>R$ 61,40</div>
+<div class="bola-pitem"><span>60DD</span>R$ 62,45</div>
+<div class="bola-pitem"><span>75DD</span>R$ 63,50</div>
+</div></div>
+<div class="bola-promo"><div class="bola-plabel">Preco Feira</div><div class="bola-pprice">R$ 53,00</div></div>
+</div>
+</div></div>
+</div>
+<div class="footer"><div>Valores sujeitos a disponibilidade de estoque. PV sugerido ao consumidor final. Frete e impostos nao inclusos.</div><div>KELME BRASIL 2026</div></div>
+<script>
+function togglePrices(el){
+  var pp=el.nextElementSibling;
+  pp.classList.toggle('open');
+  el.querySelector('.arrow').style.transform=pp.classList.contains('open')?'rotate(180deg)':'';
+}
+function filterCat(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  var ids={camisas:'sec-camisas',chuteiras:'sec-chuteiras',bolas:'sec-bolas',kids:'sec-kids'};
+  if(cat==='all'){Object.values(ids).forEach(function(id){document.getElementById(id).style.display='';});}
+  else{Object.entries(ids).forEach(function(e){document.getElementById(e[1]).style.display=e[0]===cat?'':'none';});}
+}
+function doSearch(){
+  var term=document.getElementById('searchInput').value.toLowerCase();
+  document.querySelectorAll('.card,.bola-card').forEach(function(c){
+    var s=(c.dataset.search||'')+' '+c.textContent.toLowerCase();
+    c.style.display=s.includes(term)?'':'none';
+  });
+}
+</script></body></html>
